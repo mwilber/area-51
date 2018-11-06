@@ -62,6 +62,8 @@ public class Player : MonoBehaviour
         float yaw = transform.localPosition.x * positionYawFactor;
         float roll = xThrow * controlRollFactor;
 
+        //pitch = 0;
+
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
 
     }
