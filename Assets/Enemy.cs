@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour {
     private void OnParticleCollision(GameObject other)
     {
         Instantiate(deathFx, transform.position, Quaternion.identity);
+        GameObject.FindGameObjectWithTag("ScoreBoard").GetComponent<ScoreBoard>().ScoreHit();
         Destroy(gameObject);
     }
 }
